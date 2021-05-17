@@ -136,3 +136,29 @@
     50% { transform: translate(-42%, -50%); opacity: 0.4;}
 }
 
+#playGame1 {
+	background-color: black;
+	opacity: 0.4;
+	border-radius: 20px;
+	width: 160px;
+	height: 40px;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%, -50%);
+	box-shadow: 5px 5px 10px;
+}
+
+#playGame1_text {
+	color: white;
+	font-family: Salsa-font;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%, -50%);
+}
+
+#playGame1:hover {
+	opacity: 0.6;
+	cursor: pointer;
+} 
