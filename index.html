@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Music Timer</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="musics.css">
+	<body background=".\Resources\2.png" class="fixBackground"></body>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="musics.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+	<audio class="Music" autoplay loop preload="metadata" onloadeddata="player();">
+		<source id="song" type="audio/mpeg">
+	</audio>
+	<div id="playButton" class="button" onclick="tapPlay();st=true;">
+		<svg height="300" width="300">
+			<polygon points="90,80.5 210,150 90,219.5" style="fill:white;stroke-width:0;" />
+		</svg>
+	</div>
+	<div id="musicListBox" class="musicListBox" style="display: none;">
+		<div id="musicList_page1" class="musicList" style="display:block;">
+			<div class="songinlist" onclick="playSong(1)">
+				<p class="songName"> COOLIN' - DUB'L U </p>
+			</div>
+			<div class="songinlist" onclick="playSong(2)">
+				<p class="songName"> TheBox - RoddyRicch </p>
+			</div>
+			<div class="songinlist" onclick="playSong(3)">
+				<p class="songName"> I Love you 3000 - Stephanie Poetri </p>
+			</div>
+			<div class="songinlist" onclick="playSong(4)">
+				<p class="songName"> Song 4 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(5)">
+				<p class="songName"> Song 5 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(6)">
+				<p class="songName"> Song 6 </p>
+			</div>
+		</div>
+		<div id="musicList_page2" class="musicList" style="display:none;">
+			<div class="songinlist" onclick="playSong(7)">
+				<p class="songName"> Song 7 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(8)">
+				<p class="songName"> Song 8 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(9)">
+				<p class="songName"> Song 9 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(10)">
+				<p class="songName"> Song 10 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(11)">
+				<p class="songName"> Song 11 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(12)">
+				<p class="songName"> Song 12 </p>
+			</div>
+		</div>
+		<div id="musicList_page3" class="musicList" style="display:none;">
+			<div class="songinlist" onclick="playSong(13)">
+				<p class="songName"> Song 13 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(14)">
+				<p class="songName"> Song 14 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(15)">
+				<p class="songName"> Song 15 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(16)">
+				<p class="songName"> Song 16 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(17)">
+				<p class="songName"> Song 17 </p>
+			</div>
+			<div class="songinlist" onclick="playSong(18)">
+				<p class="songName"> Song 18 </p>
+			</div>
+		</div>
+		<div>
+			<div class="transiDot" style="left:40%;opacity:100%;"></div>
+			<div class="transiDot" style="left:50%;"></div>
+			<div class="transiDot" style="left:60%;"></div>
+		</div>
+	</div>
+	<div id="transi_right" class="transiButton" style="display: none;left: calc(50% + 250px);">
+		<svg id="right_arrow" height="50" width="50" class="button_page" onclick="transiPage_right()">
+			<polygon points="17,13 37,25 17,37"/>
+		</svg>
+	</div>
+	<div id="transi_left" class="transiButton" style="display: none;left: calc(50% - 250px);">
+		<svg id="left_arrow" height="50" width="50" class="button_page" onclick="transiPage_left()">
+			<polygon points="13,25 33,13 33,37"/>
+		</svg>
+	</div>
+	<div id="player" style="display: none;">
+		<div id="fullLine"></div>
+		<div id="currLine"></div>
+		<p id="fullTime"> 0:00 </p>
+		<p id="currTime"> 0:00 </p>
+		<div id="pauseButton" onclick="pause()">
+			<svg id="pausing" height="30" width="30" style="background-color:Transparent;display:block;">
+				<polygon points="2,0 28,15 2,30" style="fill:black;opacity:0.8;"/>
+			</svg>
+			<svg id="playing" height="30" width="30" style="background-color:Transparent;display:none;">
+				<line x1="6" y1="2" x2="6" y2="28" style="stroke-width:8;stroke:black;opacity:0.8;"/>
+				<line x1="24" y1="2" x2="24" y2="28" style="stroke-width:8;stroke:black;opacity:0.8;"/>
+			</svg>
+		</div>
+	</div>
+</body>
+</html>
