@@ -6,9 +6,11 @@
 	<title>Music Timer</title>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="musics.css">
+	<link rel="stylesheet" href="game1.css">
 	<body background=".\Resources\3.png" class="fixBackground"></body>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="musics.js"></script>
+	<script type="text/javascript" src="game1.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
@@ -20,82 +22,84 @@
 			<polygon points="90,80.5 210,150 90,219.5" style="fill:white;stroke-width:0;" />
 		</svg>
 	</div>
-	<div id="musicListBox" class="musicListBox" style="display: none;">
-		<div id="musicList_page1" class="musicList" style="display:block;">
-			<div class="songinlist" onclick="playSong(1)">
-				<p class="songName"> COOLIN' - DUB'L U </p>
+	<div id="page1" style="display:block;">
+		<div id="musicListBox" class="musicListBox" style="display: none;">
+			<div id="musicList_page1" class="musicList" style="display:block;">
+				<div class="songinlist" onclick="playSong(1)">
+					<p class="songName"> COOLIN' - DUB'L U </p>
+				</div>
+				<div class="songinlist" onclick="playSong(2)">
+					<p class="songName"> TheBox - RoddyRicch </p>
+				</div>
+				<div class="songinlist" onclick="playSong(3)">
+					<p class="songName"> I Love you 3000 - Stephanie Poetri </p>
+				</div>
+				<div class="songinlist" onclick="playSong(4)">
+					<p class="songName"> Song 4 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(5)">
+					<p class="songName"> Song 5 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(6)">
+					<p class="songName"> Song 6 </p>
+				</div>
 			</div>
-			<div class="songinlist" onclick="playSong(2)">
-				<p class="songName"> TheBox - RoddyRicch </p>
+			<div id="musicList_page2" class="musicList" style="display:none;">
+				<div class="songinlist" onclick="playSong(7)">
+					<p class="songName"> Song 7 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(8)">
+					<p class="songName"> Song 8 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(9)">
+					<p class="songName"> Song 9 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(10)">
+					<p class="songName"> Song 10 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(11)">
+					<p class="songName"> Song 11 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(12)">
+					<p class="songName"> Song 12 </p>
+				</div>
 			</div>
-			<div class="songinlist" onclick="playSong(3)">
-				<p class="songName"> I Love you 3000 - Stephanie Poetri </p>
+			<div id="musicList_page3" class="musicList" style="display:none;">
+				<div class="songinlist" onclick="playSong(13)">
+					<p class="songName"> Song 13 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(14)">
+					<p class="songName"> Song 14 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(15)">
+					<p class="songName"> Song 15 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(16)">
+					<p class="songName"> Song 16 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(17)">
+					<p class="songName"> Song 17 </p>
+				</div>
+				<div class="songinlist" onclick="playSong(18)">
+					<p class="songName"> Song 18 </p>
+				</div>
 			</div>
-			<div class="songinlist" onclick="playSong(4)">
-				<p class="songName"> Song 4 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(5)">
-				<p class="songName"> Song 5 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(6)">
-				<p class="songName"> Song 6 </p>
+			<div>
+				<div class="transiDot" style="left:40%;opacity:100%;"></div>
+				<div class="transiDot" style="left:50%;"></div>
+				<div class="transiDot" style="left:60%;"></div>
 			</div>
 		</div>
-		<div id="musicList_page2" class="musicList" style="display:none;">
-			<div class="songinlist" onclick="playSong(7)">
-				<p class="songName"> Song 7 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(8)">
-				<p class="songName"> Song 8 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(9)">
-				<p class="songName"> Song 9 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(10)">
-				<p class="songName"> Song 10 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(11)">
-				<p class="songName"> Song 11 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(12)">
-				<p class="songName"> Song 12 </p>
-			</div>
+		<div id="transi_right" class="transiButton" style="display: none;left: calc(50% + 250px);">
+			<svg id="right_arrow" height="50" width="50" class="button_page" onclick="transiPage_right()">
+				<polygon points="17,13 37,25 17,37"/>
+			</svg>
 		</div>
-		<div id="musicList_page3" class="musicList" style="display:none;">
-			<div class="songinlist" onclick="playSong(13)">
-				<p class="songName"> Song 13 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(14)">
-				<p class="songName"> Song 14 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(15)">
-				<p class="songName"> Song 15 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(16)">
-				<p class="songName"> Song 16 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(17)">
-				<p class="songName"> Song 17 </p>
-			</div>
-			<div class="songinlist" onclick="playSong(18)">
-				<p class="songName"> Song 18 </p>
-			</div>
+		<div id="transi_left" class="transiButton" style="display: none;left: calc(50% - 250px);">
+			<svg id="left_arrow" height="50" width="50" class="button_page" onclick="transiPage_left()">
+				<polygon points="13,25 33,13 33,37"/>
+			</svg>
 		</div>
-		<div>
-			<div class="transiDot" style="left:40%;opacity:100%;"></div>
-			<div class="transiDot" style="left:50%;"></div>
-			<div class="transiDot" style="left:60%;"></div>
-		</div>
-	</div>
-	<div id="transi_right" class="transiButton" style="display: none;left: calc(50% + 250px);">
-		<svg id="right_arrow" height="50" width="50" class="button_page" onclick="transiPage_right()">
-			<polygon points="17,13 37,25 17,37"/>
-		</svg>
-	</div>
-	<div id="transi_left" class="transiButton" style="display: none;left: calc(50% - 250px);">
-		<svg id="left_arrow" height="50" width="50" class="button_page" onclick="transiPage_left()">
-			<polygon points="13,25 33,13 33,37"/>
-		</svg>
 	</div>
 	<div id="player" style="display: none;">
 		<div id="fullLine"></div>
@@ -112,8 +116,11 @@
 			</svg>
 		</div>
 	</div>
-	<div id="playGame1">
+	<div id="playGame1" onclick="game1()" style="display:none">
 		<p id="playGame1_text"> Play Game </p>
+	</div>
+	<div id="page2" style="display:none;">
+		<div id="playboard"></div>
 	</div>
 </body>
 </html>
