@@ -13,11 +13,28 @@
 	transform: translate(-50%, -50%);
 }
 
-#innerground {
-	border-radius: 20px;
+.navibutton {
 	background-color: black;
-	width: 320px;
-	height: 320px; 
+	opacity: 0.4;
+	border-radius: 20px;
+	width: 160px;
+	height: 40px;
+	position: absolute;
+	top: 10%;
+	transform: translate(-50%, -50%);
+	box-shadow: 5px 5px 10px;
+}
+
+.navibutton:hover {
+	opacity: 0.6;
+	cursor: pointer;
+} 
+
+.ground {
+	border-radius: 20px;
+	background: transparent;
+	width: 420px;
+	height: 410px; 
 	opacity: 0.6;
 	position: absolute;
 	top: 50%;
@@ -25,10 +42,37 @@
 	transform: translate(-50%, -50%);
 }
 
-.linee {
-	background-color: white;
-	width: 320px;
-	height: 40px; 
+.line {
+	background: transparent;
+	margin: 10px;
+	width: 400px;
+	height: 90px; 
 	opacity: 1.0;
 }
 
+.box {
+	background-color: black;
+	border-radius: 10px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 90px;
+	height: 90px; 
+	opacity: 1.0;
+}
+
+.tile {
+	background-color: white;
+	border-radius: 10px;
+	float: left;
+	margin: 5px;
+	width: 90px;
+	height: 90px; 
+	opacity: 1.0;
+}
+
+#countdown_number {
+	font-family: Salsa-font;
+	font-size: 120px;
+	color: red;
+}
