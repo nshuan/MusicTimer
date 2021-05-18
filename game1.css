@@ -12,3 +12,23 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+#innerground {
+	border-radius: 20px;
+	background-color: black;
+	width: 320px;
+	height: 320px; 
+	opacity: 0.6;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.linee {
+	background-color: white;
+	width: 320px;
+	height: 40px; 
+	opacity: 1.0;
+}
+
