@@ -5,8 +5,7 @@
 	padding: 20px; 
 	width: 400px;
 	height: 400px; 
-	opacity: 0.4;
-	box-shadow: 10px 10px 20px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -35,30 +34,10 @@
 	background: transparent;
 	width: 420px;
 	height: 410px; 
-	opacity: 0.6;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.line {
-	background: transparent;
-	margin: 10px;
-	width: 400px;
-	height: 90px; 
-	opacity: 1.0;
-}
-
-.box {
-	background-color: black;
-	border-radius: 10px;
-	float: left;
-	margin-left: 5px;
-	margin-right: 5px;
-	width: 90px;
-	height: 90px; 
-	opacity: 1.0;
 }
 
 .tile {
@@ -68,11 +47,27 @@
 	margin: 5px;
 	width: 90px;
 	height: 90px; 
-	opacity: 1.0;
+	opacity: 0.2;
 }
 
-#countdown_number {
+.btile {
+	background-color: white;
+	border-radius: 10px;
+	float: left;
+	margin: 5px;
+	width: 90px;
+	height: 90px; 
+	opacity: 0.2;
+}
+
+.btile:hover {
+	background-color: blue;
+	cursor: pointer;
+}
+
+.countdown_number {
 	font-family: Salsa-font;
 	font-size: 120px;
 	color: red;
+	opacity: 0.4;
 }
