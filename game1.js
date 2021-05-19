@@ -2,37 +2,49 @@
 
 'use strict'
 
+var stg1 = false;
+
 function game1() {
-	var page1 = document.getElementById('page1');
-	var page2 = document.getElementById('page2');
-	var ptext = document.getElementById('playGame1_text');
-	var plbrd = document.getElementById('playboard');
-	var ingrd = document.getElementById('bottomground');
-	if (page1.style.display == "block") {
-		page1.style.display = "none";
-		page2.style.display = "block";
-		ptext.innerHTML = "Start";
-		if (innerWidth <= innerHeight) {
-			plbrd.style.width = "80vw";
-			plbrd.style.height = "80vw";
-			ingrd.style.width = "calc(80vw - 40px)";
-			ingrd.style.height = "calc(80vw - 40px)";
-		}
-	}
+	var songsource = document.getElementById('song');
+	console.log(songsource.src);
+	if (songsource.src == "") alert('Choose a song!');
 	else {
-		if (ptext.innerHTML == "Play again") {
+		var page1 = document.getElementById('page1');
+		var page2 = document.getElementById('page2');
+		var ptext = document.getElementById('playGame1_text');
+		var plbrd = document.getElementById('playboard');
+		var ingrd = document.getElementById('bottomground');
+		if (page1.style.display == "block") {
+			page1.style.display = "none";
+			page2.style.display = "block";
 			ptext.innerHTML = "Start";
-			var tiles = document.getElementsByClassName('tile');
-			var cover = document.getElementById('cover');
-			var congr = document.getElementsByClassName('countdown_number');
-			cover.remove();
-			congr[1].remove();
-			for (var i = 0; i < 16; i++) {
-				tiles[i].style.backgroundColor = "white";
-				choice[i].style.backgroundColor = "white";
+			if (innerWidth <= innerHeight) {
+				plbrd.style.width = "80vw";
+				plbrd.style.height = "80vw";
+				ingrd.style.width = "calc(80vw - 40px)";
+				ingrd.style.height = "calc(80vw - 40px)";
 			}
 		}
-		else startGame();
+		else {
+			if (ptext.innerHTML == "Play again") {
+				ptext.innerHTML = "Start";
+				var tiles = document.getElementsByClassName('tile');
+				var cover = document.getElementById('cover');
+				var congr = document.getElementsByClassName('countdown_number');
+				cover.remove();
+				congr[1].remove();
+				for (var i = 0; i < 16; i++) {
+					tiles[i].style.backgroundColor = "white";
+					choice[i].style.backgroundColor = "white";
+				}
+				stg1 = false;
+			}
+			else {
+				console.log(stg1);
+				if (stg1 == false && ptext.innerHTML == "Start") {stg1 = true;startGame();}
+				else {if (stg1 == true) alert('Finish your current game!');}
+			}
+		}
 	}
 }
 
@@ -75,8 +87,8 @@ function gamePlay() {
 
 function checkchoice(no) {
 	var plb = document.getElementById('playboard');
+	if (choice[no].style.backgroundColor != "blue") p_ans.push(no);
 	choice[no].style.backgroundColor = "blue";
-	p_ans.push(no);
 	if (p_ans.length == 8) {
 		var cover = document.createElement('div');
 		cover.className = "ground";
