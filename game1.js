@@ -29,7 +29,7 @@ function game1() {
 					ubgrd[i].style.height = "80vw";
 				}
 				for (var i = 0; i < navbt.length; i++) {
-					navbt[i].style.top = "calc(25% - 20vw + 30px)";
+					navbt[i].style.top = "calc(25% - 20vw + 25px)";
 				}
 				navbt[0].style.left = "25vw";
 				for (var i = 0; i < 16; i++) {
