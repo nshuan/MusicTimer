@@ -13,7 +13,10 @@ function game1() {
 		var page2 = document.getElementById('page2');
 		var ptext = document.getElementById('playGame1_text');
 		var plbrd = document.getElementById('playboard');
-		var ingrd = document.getElementById('bottomground');
+		var ubgrd = document.getElementsByClassName('ground');
+		var navbt = document.getElementsByClassName('navibutton');
+		var Tiles = document.getElementsByClassName('tile');
+		var bTile = document.getElementsByClassName('btile');
 		if (page1.style.display == "block") {
 			page1.style.display = "none";
 			page2.style.display = "block";
@@ -21,8 +24,20 @@ function game1() {
 			if (innerWidth <= innerHeight) {
 				plbrd.style.width = "80vw";
 				plbrd.style.height = "80vw";
-				ingrd.style.width = "calc(80vw - 40px)";
-				ingrd.style.height = "calc(80vw - 40px)";
+				for (var i = 0; i < ubgrd.length; i++) {
+					ubgrd[i].style.width = "80vw";
+					ubgrd[i].style.height = "80vw";
+				}
+				for (var i = 0; i < navbt.length; i++) {
+					navbt[i].style.top = "calc(25% - 20vw + 50px)";
+				}
+				navbt[0].style.left = "25vw";
+				for (var i = 0; i < 16; i++) {
+					Tiles[i].style.width = "calc(20vw - 10px)";
+					Tiles[i].style.height = "calc(20vw - 10px)";
+					bTile[i].style.width = "calc(20vw - 10px)";
+					bTile[i].style.height = "calc(20vw - 10px)";
+				}
 			}
 		}
 		else {

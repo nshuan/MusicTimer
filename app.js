@@ -21,6 +21,7 @@ function tapPlay() {
 		tbl.style.display = "block";
 		tbr.style.display = "block";
 	}
+	else pg1.style.top = "calc(25% - 20vw - 50px)";
 }
 
 function transiPage_right() {
