@@ -9,19 +9,12 @@ var list = document.getElementsByClassName("musicList");
 function tapPlay() {
 	var btn = document.getElementById('playButton');
 	var msl = document.getElementById('musicListBox');
-	var tbl = document.getElementById('transi_left');
-	var tbr = document.getElementById('transi_right');
 	var plr = document.getElementById('player');
 	var pg1 = document.getElementById('playGame1');
 	btn.style.display = "none";
 	msl.style.display = "block";
 	plr.style.display = "block";
 	pg1.style.display = "block";
-	if (innerWidth >= innerHeight) {
-		tbl.style.display = "block";
-		tbr.style.display = "block";
-	}
-	else pg1.style.top = "calc(25% - 20vw - 25px)";
 }
 
 function transiPage_right() {

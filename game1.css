@@ -70,3 +70,28 @@
 	color: red;
 	opacity: 0.4;
 }
+
+#back {left: calc(50% - 200px);}
+
+@media screen and (max-width: 768px) {
+	.ground {
+		width: 80vw;
+		height: 80vw;
+	}
+	#playboard {
+		width: 80vw;
+		height: 80vw;
+	}
+	.navibutton {
+		top: calc(25% - 20vw + 25px);
+	}
+	.tile {
+		width: calc(20vw - 10px);
+		height: calc(20vw - 10px);
+	}
+	.btile {
+		width: calc(20vw - 10px);
+		height: calc(20vw - 10px);
+	}
+	#back {left: 25vw;}
+}

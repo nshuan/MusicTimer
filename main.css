@@ -88,7 +88,7 @@
 	background-color: white;
 	opacity: 0.5;
 	border-radius: 50%;
-	display: inline-block;
+	display: none;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -162,3 +162,11 @@
 	opacity: 0.6;
 	cursor: pointer;
 } 
+
+@media screen and (min-width: 768px) {
+	.transiButton {display: block;}
+}
+
+@media screen and (max-width: 768px) {
+	#playGame1 {top: calc(25% - 20vw - 25px);}
+}

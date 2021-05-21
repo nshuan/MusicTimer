@@ -21,24 +21,6 @@ function game1() {
 			page1.style.display = "none";
 			page2.style.display = "block";
 			ptext.innerHTML = "Start";
-			if (innerWidth <= innerHeight) {
-				plbrd.style.width = "80vw";
-				plbrd.style.height = "80vw";
-				for (var i = 0; i < ubgrd.length; i++) {
-					ubgrd[i].style.width = "80vw";
-					ubgrd[i].style.height = "80vw";
-				}
-				for (var i = 0; i < navbt.length; i++) {
-					navbt[i].style.top = "calc(25% - 20vw + 25px)";
-				}
-				navbt[0].style.left = "25vw";
-				for (var i = 0; i < 16; i++) {
-					Tiles[i].style.width = "calc(20vw - 10px)";
-					Tiles[i].style.height = "calc(20vw - 10px)";
-					bTile[i].style.width = "calc(20vw - 10px)";
-					bTile[i].style.height = "calc(20vw - 10px)";
-				}
-			}
 		}
 		else {
 			if (ptext.innerHTML == "Play again") {
