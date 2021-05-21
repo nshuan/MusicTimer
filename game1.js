@@ -107,6 +107,10 @@ function checkchoice(no) {
 	if (p_ans.length == 8) {
 		var cover = document.createElement('div');
 		cover.className = "ground";
+		if (innerWidth <= innerHeight) {
+			cover.style.width = "80vw";
+			cover.style.height = "80vw";
+		}
 		cover.id = "cover";
 		plb.appendChild(cover);
 		checkans();
