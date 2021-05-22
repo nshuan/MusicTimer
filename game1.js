@@ -13,26 +13,30 @@ function game1() {
 		var page2 = document.getElementById('page2');
 		var ptext = document.getElementById('playGame1_text');
 		var plbrd = document.getElementById('playboard');
-		var ubgrd = document.getElementsByClassName('ground');
-		var navbt = document.getElementsByClassName('navibutton');
 		var Tiles = document.getElementsByClassName('tile');
 		var bTile = document.getElementsByClassName('btile');
+		var cover = document.getElementById('cover');
+		var congr = document.getElementsByClassName('countdown_number');
 		if (page1.style.display == "block") {
 			page1.style.display = "none";
 			page2.style.display = "block";
 			ptext.innerHTML = "Start";
+			cover.remove();
+			congr[1].remove();
+			for (var i = 0; i < 16; i++) {
+				Tiles[i].style.backgroundColor = "white";
+				bTile[i].style.backgroundColor = "white";
+			}
+			stg1 = false;
 		}
 		else {
 			if (ptext.innerHTML == "Play again") {
 				ptext.innerHTML = "Start";
-				var tiles = document.getElementsByClassName('tile');
-				var cover = document.getElementById('cover');
-				var congr = document.getElementsByClassName('countdown_number');
 				cover.remove();
 				congr[1].remove();
 				for (var i = 0; i < 16; i++) {
-					tiles[i].style.backgroundColor = "white";
-					choice[i].style.backgroundColor = "white";
+					Tiles[i].style.backgroundColor = "white";
+					bTile[i].style.backgroundColor = "white";
 				}
 				stg1 = false;
 			}
